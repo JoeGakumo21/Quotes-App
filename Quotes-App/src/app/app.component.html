@@ -1,1 +1,24 @@
-<h1 class="header">{{title}}</h1>
+
+<div class="container">
+  <h1 class="header">Welcome to Quotes-App</h1>
+  <hr>
+  <h3 class="text-">Quote App </h3>
+  <p class="text-dark">welcome in this website where you can create your own <em>Quote </em> and post it and see how many people will like your quote</p>
+  <p>Enjoy </p>
+  <div class="row">
+    <div class="col-6">
+      <ul>
+        <!-- to display name of user to write the quote -->
+        <li *ngFor="let quote of  myQuote">{{quote.name}}</li>
+      <!-- to display name of user to write the quote -->
+      <li *ngFor="let quote of  myQuote">{{quote.tittleQuote}}</li>
+      
+      <!-- to display name of user to write the messageQuote -->
+      <li *ngFor="let quote of  myQuote">{{quote.messageQuote}}</li>
+      
+      <!-- to display name of user to write the quote -->
+      <li *ngFor="let quote of  myQuote">{{quote.author}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

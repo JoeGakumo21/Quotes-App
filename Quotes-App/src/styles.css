@@ -12,3 +12,9 @@ body{
     text-align: center;
     color: #a52c2c;
 }
+li{
+    /* color: aliceblue; */
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+
+}
