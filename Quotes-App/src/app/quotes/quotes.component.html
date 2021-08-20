@@ -13,23 +13,23 @@
                 <li *ngFor="let quote of  myQuote; let i =index" class="text-primary">
                     {{quote.name}} 
                     <button class="btn bg-warning mt-2 ml-5" (click)='toggleQuoteDetails(i)'>See Quote</button>
-                  <app-quotes-details *ngIf='quote.showQuoteMessageAndAuthor' [myQuote]="quote"></app-quotes-details>
+                  <app-quotes-details *ngIf='quote.showQuoteMessageAndAuthor' [myQuote]="quote" (isQuoteDone)='quoteDoneDelete($event, i)'></app-quotes-details>
                 </li>
                </ul>
             </div>
           </div>
     </div>
-    <!-- <div class="jumbotron bg-light col-5 info mt-3">
-        <div class="row">
-            <div>
-              <ul>
-                <!-- to display name of user to write the quote -->
-                <!-- <li *ngFor="let quote of  myQuote" class="text-primary">
-                    {{quote.name}} 
-                  <app-quotes-details [myQuote]="quote"></app-quotes-details>
-                </li>
-               </ul>
-            </div>
+    <div class="jumbotron bg-light col-5 info mt-3">
+      <div class="row">
+          <div>
+            <ul>
+              <!-- to display name of user to write the quote -->
+              <li *ngFor="let quote of  myQuote; let i =index" class="text-primary">
+                  {{quote.name}} 
+                  <button class="btn bg-warning mt-2 ml-5" (click)='toggleQuoteDetails(i)'>See Quote</button>
+                <app-quotes-details *ngIf='quote.showQuoteMessageAndAuthor' [myQuote]="quote" (isQuoteDone)='quoteDoneDelete($event, i)'></app-quotes-details>
+              </li>
+             </ul>
           </div>
-    </div>
-  </div> --> 
+        </div>
+  </div>
