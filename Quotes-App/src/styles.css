@@ -16,5 +16,15 @@ li{
     /* color: aliceblue; */
     font-size: 1.5rem;
     font-family: 'Courier New', Courier, monospace;
+  
 
+}
+span{
+    color:darkgreen;
+}
+p{
+    color:black
+}
+.info{
+    border-radius: 5px;
 }

@@ -5,20 +5,17 @@
     <h3 class="text-">Quote App </h3>
     <p class="text-dark">welcome in this website where you can create your own <em>Quote </em> and post it and see how many people will like your quote</p>
     <p>Enjoy </p>
-    <div class="row">
-      <div class="col-6">
-        <ul>
-          <!-- to display name of user to write the quote -->
-          <li *ngFor="let quote of  myQuote">{{quote.name}}</li>
-        <!-- to display name of user to write the quote -->
-        <li *ngFor="let quote of  myQuote">{{quote.tittleQuote}}</li>
-        
-        <!-- to display name of user to write the messageQuote -->
-        <li *ngFor="let quote of  myQuote">{{quote.messageQuote}}</li>
-        
-        <!-- to display name of user to write the quote -->
-        <li *ngFor="let quote of  myQuote">{{quote.author}}</li>
-        </ul>
-      </div>
+    <div class="jumbotron bg-light col-5 info">
+        <div class="row">
+            <div>
+              <ul>
+                <!-- to display name of user to write the quote -->
+                <li *ngFor="let quote of  myQuote" class="text-primary">
+                    {{quote.name}} 
+                  <app-quotes-details [myQuote]="quote"></app-quotes-details>
+                </li>
+               </ul>
+            </div>
+          </div>
     </div>
   </div>
