@@ -10,9 +10,10 @@
             <div>
               <ul>
                 <!-- to display name of user to write the quote -->
-                <li *ngFor="let quote of  myQuote" class="text-primary">
+                <li *ngFor="let quote of  myQuote; let i =index" class="text-primary">
                     {{quote.name}} 
-                  <app-quotes-details [myQuote]="quote"></app-quotes-details>
+                    <button class="btn bg-warning" (click)='toggleQuoteDetails(i)'>See Quote</button>
+                  <app-quotes-details *ngIf='myQuote.showQuoteMessageAndAuthor' [myQuote]="quote"></app-quotes-details>
                 </li>
                </ul>
             </div>
