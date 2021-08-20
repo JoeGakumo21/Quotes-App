@@ -13,7 +13,7 @@
                 <li *ngFor="let quote of  myQuote; let i =index" class="text-primary">
                     {{quote.name}} 
                     <button class="btn bg-warning" (click)='toggleQuoteDetails(i)'>See Quote</button>
-                  <app-quotes-details *ngIf='myQuote.showQuoteMessageAndAuthor' [myQuote]="quote"></app-quotes-details>
+                  <app-quotes-details *ngIf='quote.showQuoteMessageAndAuthor' [myQuote]="quote"></app-quotes-details>
                 </li>
                </ul>
             </div>

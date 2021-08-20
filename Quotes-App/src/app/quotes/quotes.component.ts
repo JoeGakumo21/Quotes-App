@@ -15,7 +15,9 @@ export class QuotesComponent implements OnInit {
     // {name:"Nancy Munyui",tittleQuote:"Motivation Quote",messageQuote:"When you change your thoughts, remember to also change your world.",author:"Norman Vincent Peale"},
   ];
   
-
+  toggleQuoteDetails(index:any){
+    this.myQuote[index].showQuoteMessageAndAuthor= !this.myQuote[index].showQuoteMessageAndAuthor;
+  }
   constructor() { }
 
   ngOnInit(): void {
