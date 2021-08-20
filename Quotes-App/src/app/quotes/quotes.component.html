@@ -18,4 +18,17 @@
             </div>
           </div>
     </div>
+    <div class="jumbotron bg-light col-5 info mt-3">
+        <div class="row">
+            <div>
+              <ul>
+                <!-- to display name of user to write the quote -->
+                <li *ngFor="let quote of  myQuote" class="text-primary">
+                    {{quote.name}} 
+                  <app-quotes-details [myQuote]="quote"></app-quotes-details>
+                </li>
+               </ul>
+            </div>
+          </div>
+    </div>
   </div>
