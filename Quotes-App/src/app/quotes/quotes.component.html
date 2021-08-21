@@ -5,15 +5,33 @@
     <h3 class="text-">Quote App </h3>
     <p class="text-dark">welcome in this website where you can create your own <em>Quote </em> and post it and see how many people will like your quote</p>
     <p>Enjoy </p>
-    <div class="jumbotron bg-light col-5 info">
+    <div class="jumbotron bg-light col-8 info">
         <div class="row">
             <div>
               <ul>
                 <!-- to display name of user to write the quote -->
                 <li *ngFor="let quote of  myQuote; let i =index" class="text-primary">
-                    {{quote.name}} 
-                    <button class="btn bg-warning mt-2 ml-5" (click)='toggleQuoteDetails(i)'>See Quote</button>
-                  <app-quotes-details *ngIf='quote.showQuoteMessageAndAuthor' [myQuote]="quote" (isQuoteDone)='quoteDoneDelete($event, i)'></app-quotes-details>
+                  <div class="row mt-3 col-lg-12 col-sm-12">
+                    <div class="col-6">
+                      {{quote.name}} 
+                    </div>
+                    <div class="col-6 mb-3">
+                      <button class="btn bg-warning mt-2 ml-5" (click)='toggleQuoteDetails(i)'>See Quote</button>
+                    </div>
+                    <hr>
+                  </div>
+                   <div class="row mt-2">
+                     <div class="col-4">
+                    <button (click)="onClickLikes()"  class="btn btn-medium btn-success mt-3 mb-3" >Likes {{numberOfLikes}}</button>
+                     </div>
+                     <div class="col-4">
+                    <button (click)="onClickDislike()" class="btn btn-medium btn-info mt-3 mb-3" >Dislike {{numberOfDislikes}}</button>
+                   </div>
+                    <div class="col-4 mt-2 text-success mt-3 mb-3">
+                    On: {{quote.postedOn}}
+                    </div>
+                   </div>
+                    <app-quotes-details *ngIf='quote.showQuoteMessageAndAuthor' [myQuote]="quote" (isQuoteDone)='quoteDoneDelete($event, i)'></app-quotes-details>
                 </li>
                </ul>
             </div>
@@ -22,6 +40,11 @@
    <div class="row">
      
    </div>
-    <button (click)="onClickLikes()"  class="btn btn-medium btn-success mt-3" >Likes {{numberOfLikes}}</button>
-    <button (click)="onClickDislike()" class="btn btn-medium btn-info mt-3" >Dislike {{numberOfDislikes}}</button>
     
+    <!-- <div class="row ">
+    <div class="col-6 col-lg-6 col-sm-12">
+        <p>Posted By: <span>{{myQuote.author}}</span></p>
+    </div>
+    <div class="col-6 col-lg-6 col-sm-12">
+        <p>Posted On: {{myQuote.postedOn}}</p>
+    </div> -->

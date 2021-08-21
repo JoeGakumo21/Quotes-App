@@ -1,7 +1,16 @@
 <hr>
 <p class="text-black">Quote Type: {{myQuote.tittleQuote}}</p>
-<hr>
+
 <p class="text-danger">{{myQuote.messageQuote}}</p>
+
+<div class="row ">
+    <div class="col-6 col-lg-6 col-sm-12">
+        <p>Posted By: <span>{{myQuote.author}}</span></p>
+    </div>
+    <div class="col-6 col-lg-6 col-sm-12">
+        <!-- <p>Posted On:<span class="text-primary">{{myQuote.postedOn}}</span></p> -->
+    </div>
+</div>
+
 <hr>
-<p>Posted by: <span>{{myQuote.author}}</span></p>
 <button (click)='quoteComplete(true)' class="btn btn-danger">Delete Quote</button>
