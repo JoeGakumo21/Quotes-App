@@ -1,6 +1,7 @@
+import { Quotes } from './../quotes';
 import { Quote } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { Quotes } from '../quotes';
+// import { Quotes } from '../quotes';
 @Component({
   selector: 'app-quotes',
   templateUrl: './quotes.component.html',
@@ -14,7 +15,12 @@ export class QuotesComponent implements OnInit {
     // {name:"Moses Mugo ",tittleQuote:"Motivation Quote",messageQuote:"Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.",author:"JDiane McLaren"},
     // {name:"Nancy Munyui",tittleQuote:"Motivation Quote",messageQuote:"When you change your thoughts, remember to also change your world.",author:"Norman Vincent Peale"},
   ];
-  
+  addNewQuote(Quotes:Quotes){
+    let QuotesLength= this.myQuote.length;
+    Quotes.index=QuotesLength+1;
+    Quotes.postedOn=new Date(Quotes.postedOn)
+    this.myQuote.push(Quotes)
+  }
   toggleQuoteDetails(index:any){
     this.myQuote[index].showQuoteMessageAndAuthor= !this.myQuote[index].showQuoteMessageAndAuthor;
   }
