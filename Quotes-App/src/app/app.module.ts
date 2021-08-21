@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesDetailsComponent } from './quotes-details/quotes-details.component';
 import { QuoteLikesDirective } from './quote-likes.directive';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { QuoteLikesDirective } from './quote-likes.directive';
     AppComponent,
     QuotesComponent,
     QuotesDetailsComponent,
-    QuoteLikesDirective
+    QuoteLikesDirective,
+    QuoteFormComponent
   ],
   imports: [
     BrowserModule,
