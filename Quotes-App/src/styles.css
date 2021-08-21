@@ -28,3 +28,7 @@ p{
 .info{
     border-radius: 5px;
 }
+.btn-success{
+ margin-left: 2rem;
+ margin-right: 5rem;
+}
