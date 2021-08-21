@@ -27,8 +27,8 @@
                      <div class="col-4">
                     <button (click)="onClickDislike()" class="btn btn-medium btn-info mt-3 mb-3" >Dislike {{numberOfDislikes}}</button>
                    </div>
-                    <div class="col-4 mt-2 text-success mt-3 mb-3">
-                    On: {{quote.postedOn}}
+                    <div class="col-4 mt-2 text-danger mt-3 mb-3">
+                     On: {{quote.postedOn|date}}
                     </div>
                    </div>
                     <app-quotes-details *ngIf='quote.showQuoteMessageAndAuthor' [myQuote]="quote" (isQuoteDone)='quoteDoneDelete($event, i)'></app-quotes-details>
