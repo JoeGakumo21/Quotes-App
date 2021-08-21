@@ -21,7 +21,10 @@ export class QuotesComponent implements OnInit {
 
   quoteDoneDelete(isQuoteDone: any, index: number){
     if(isQuoteDone){
+      let deleteQuote=confirm(`Are you sure you want to delete ${this.myQuote[index].name} Quote?`)
+      if(deleteQuote){
       this.myQuote.splice(index,1);
+      }
     }
   }
   numberOfLikes:number=0;
