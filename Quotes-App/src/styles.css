@@ -69,7 +69,7 @@ footer{
 }
 .content{
     /* background-color:red; */
-    background-image: url("/assets/images/background.jpg");
+    background-image: url("./assets/images/background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
