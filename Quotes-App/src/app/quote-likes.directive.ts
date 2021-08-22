@@ -15,6 +15,7 @@ export class QuoteLikesDirective {
   dislikeButtonClick(){
     this.numberOfLikes--;
   }
+  
   constructor(private elem:ElementRef) {
     this.elem.nativeElement.style.color="Red";
    }
