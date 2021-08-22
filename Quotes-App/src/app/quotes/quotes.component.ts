@@ -35,12 +35,14 @@ export class QuotesComponent implements OnInit {
   }
   numberOfLikes:number=0;
   numberOfDislikes:number=0;
+  // likes  function
   onClickLikes(){
     this.numberOfLikes++;
 
   }
+  // function for dislike
   onClickDislike(){
-    this.numberOfDislikes--;
+    this.numberOfDislikes++;
   }
   constructor() { }
 

@@ -6,7 +6,7 @@
     padding: 0px;
 }
 body{
-    background-color: #cddead;
+    background-color: #031013;
 }
 .header{
     text-align: center;
@@ -31,4 +31,10 @@ p{
 .btn-success{
  margin-left: 2rem;
  margin-right: 5rem;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1ea346 !important;
 }

@@ -1,6 +1,4 @@
 <div class="container">
-    <h2 class="text-success text-center">Booom Create your own Quote</h2>
-    <hr>
     <form #quoteForm='ngForm' (ngSubmit)='quoteSubmit()'>
         <div class="form-group">
             <label for="name">Name</label>
@@ -40,7 +38,7 @@
         </div>
         <div class="form-group">
             <label for="postedOn">Posted On</label>
-            <input type="text" name="postedOn" id="postedOn" class="form-control" required [(ngModel)]="newQuote.postedOn" #postedOn='ngModel'>
+            <input type="date" name="postedOn" id="postedOn" class="form-control" required [(ngModel)]="newQuote.postedOn" #postedOn='ngModel'>
             <div [hidden]="postedOn.valid || postedOn.pristine" class="alert alert-danger">
                 <p>This filed must be filled</p>
             </div>
