@@ -2,7 +2,7 @@
 @import"~bootstrap/dist/css/bootstrap.css";
 *{
     box-sizing: border-box;
-    margin: 0%;
+    margin: 0px;
     padding: 0px;
 }
 body{
@@ -10,7 +10,7 @@ body{
 }
 .header{
     text-align: center;
-    color: #a52c2c;
+    color: #a52c2c !important;
 }
 li{
     /* color: aliceblue; */
@@ -20,10 +20,10 @@ li{
 
 }
 span{
-    color:darkgreen;
+    color:#5327CC;
 }
 p{
-    color:black
+    color:black !important;
 }
 .info{
     border-radius: 5px;
@@ -36,5 +36,49 @@ h1{
     font-size: 4rem;
     font-weight: 700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #1ea346 !important;
+    color:#5327CC !important;
+}
+.jumbotron{
+    background:rgb(231, 214, 231);
+    border-radius: 5px;
+}
+.main-content{
+    background-color: cadetblue;
+    margin-top: 20px;
+    border-radius: 4px;
+    height: auto;
+}
+
+.form{
+    background-color: rgb(34, 3, 34,.4);
+    padding: 5px;
+    box-shadow: 10px 20px #070707;
+    border-radius: 5px;
+
+}
+ul h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #770BD9 !important;
+}
+footer{
+    height: 60px;
+    background-color: rgb(87, 13, 13);
+    border-radius: 3px;
+}
+.content{
+    /* background-color:red; */
+    background-image: url("/assets/images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+.footer{
+padding: 20px;
+}
+.line{
+    color:coral;
 }

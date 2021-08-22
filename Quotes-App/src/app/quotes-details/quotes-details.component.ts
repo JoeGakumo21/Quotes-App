@@ -14,6 +14,17 @@ export class QuotesDetailsComponent implements OnInit {
   quoteComplete(quoteDone:boolean){
     this.isQuoteDone.emit(quoteDone);
   }
+  numberOfLikes:number=0;
+  numberOfDislikes:number=0;
+  // likes  function
+  onClickLikes(){
+    this.numberOfLikes++;
+
+  }
+  // function for dislike
+  onClickDislike(){
+    this.numberOfDislikes++;
+  }
 
   constructor() { }
 

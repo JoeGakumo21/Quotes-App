@@ -10,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class QuotesComponent implements OnInit {
 
   myQuote:Quotes[]=[
-    new Quotes(1,"Joseph Gakumo ","Motivation Quote","Success is not Final, Failure is not Fatal, Its the courage to continue that counts","JoeKumsy Kenyan",new Date(2021,8,2)),
+    new Quotes(1,"Joseph Gakumo ","Motivation Quote","Success is not Final, Failure is not Fatal, Its the courage to continue that counts","JoeKumsy Kenyan",new Date(2021,7,2)),
+    // new Quotes(1,"Joseph Gakumo ","Motivation Quote","Success is not Final, Failure is not Fatal, Its the courage to continue that counts","JoeKumsy Kenyan",new Date(2021,7,2)),
+
     // {name:"Teresia Wairimu ",tittleQuote:"Super Motivation Quote",messageQuote:"It is only when we take chances, when our lives improve. The initial and the most difficult risk that we need to take is to become honest.",author:"Walter Anderson"},
     // {name:"Moses Mugo ",tittleQuote:"Motivation Quote",messageQuote:"Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.",author:"JDiane McLaren"},
     // {name:"Nancy Munyui",tittleQuote:"Motivation Quote",messageQuote:"When you change your thoughts, remember to also change your world.",author:"Norman Vincent Peale"},
@@ -33,17 +35,17 @@ export class QuotesComponent implements OnInit {
       }
     }
   }
-  numberOfLikes:number=0;
-  numberOfDislikes:number=0;
-  // likes  function
-  onClickLikes(){
-    this.numberOfLikes++;
+  // numberOfLikes:number=0;
+  // numberOfDislikes:number=0;
+  // // likes  function
+  // onClickLikes(){
+  //   this.numberOfLikes++;
 
-  }
-  // function for dislike
-  onClickDislike(){
-    this.numberOfDislikes++;
-  }
+  // }
+  // // function for dislike
+  // onClickDislike(){
+  //   this.numberOfDislikes++;
+  // }
   constructor() { }
 
   ngOnInit(): void {

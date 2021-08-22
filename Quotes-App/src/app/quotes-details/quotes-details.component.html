@@ -7,11 +7,22 @@
     <div class="col-6 col-lg-6 col-sm-12">
         <p>Posted By: <span>{{myQuote.author}}</span></p>
     </div>
-    <div class="col-6 col-lg-6 col-sm-12">
-        <!-- <p>Posted On:<span class="text-primary">{{myQuote.postedOn}}</span></p> -->
-    </div>
 </div>
 
 <hr>
-<button (click)='quoteComplete(true)' class="btn btn-danger">Delete Quote</button>
-<p class="mt-2 mb-3">This Quote was posted for {{myQuote.postedOn|date|datesCount}} days</p>
+
+
+<div class="row " >
+    <div class="col-4 col-lg-4 col-sm-12">
+        <button  (click)="onClickLikes()" class="btn btn-medium btn-success mt-3 mb-3">Likes
+            {{numberOfLikes}}</button> 
+    </div>
+    <div class="col-4 col-lg-4 col-sm-12">
+        <button (click)="onClickDislike()" class="btn btn-medium btn-secondary mt-3 mb-3">Dislike
+            {{numberOfDislikes}}</button>
+    </div>
+    <div class="col-4 mt-3 mb-3 col-lg-4 col-sm-12">
+        <button (click)='quoteComplete(true)' class="btn btn-danger">Delete Quote</button> 
+    </div>
+</div>
+<p class="mt-2 mb-3 text-center tyext-warning">This Quote was posted for {{myQuote.postedOn|date|datesCount}} days</p>

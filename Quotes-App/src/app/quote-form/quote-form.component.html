@@ -1,7 +1,8 @@
 <div class="container">
+    <div class="form">
     <form #quoteForm='ngForm' (ngSubmit)='quoteSubmit()'>
         <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name" class="text-light">Name</label>
             <input type="text" name="name" id="name" class="form-control" required [(ngModel)]="newQuote.name" #name='ngModel'>
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                 <p>This filed must be filled</p>
@@ -10,7 +11,7 @@
             <!-- display {{newQuote.name}} -->
         </div>
         <div class="form-group">
-            <label for="name">Type of Quote </label>
+            <label for="name" class="text-light">Type of Quote </label>
             <input type="text" name="tittleQuote" id="tittleQuote" class="form-control" required [(ngModel)]="newQuote.tittleQuote" #tittleQuote='ngModel'>
             <div [hidden]="tittleQuote.valid ||tittleQuote.pristine" class="alert alert-danger">
                 <p>This filed must be filled</p>
@@ -19,7 +20,7 @@
                      <!-- display {{newQuote.tittleQuote}} -->
         </div>
         <div class="form-group">
-            <label for="messageQuote">Main Quote</label>
+            <label for="messageQuote" class="text-light">Main Quote</label>
             <textarea name="messageQuote" id="messageQuote" cols="" rows="10" required class="form-control" [(ngModel)]="newQuote.messageQuote" #messageQuote='ngModel'></textarea>
             <div [hidden]="messageQuote.valid ||messageQuote.pristine" class="alert alert-danger">
                 <p>This filed must be filled</p>
@@ -28,7 +29,7 @@
                      <!-- display {{newQuote.messageQuote}} -->
         </div>
         <div class="form-group">
-            <label for="author">Authors Name</label>
+            <label for="author" class="text-light">Authors Name</label>
             <input type="text" name="author" id="author" class="form-control" required [(ngModel)]="newQuote.author" #author='ngModel'>
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                 <p>This filed must be filled</p>
@@ -37,7 +38,7 @@
                      <!-- display {{newQuote.author}} -->
         </div>
         <div class="form-group">
-            <label for="postedOn">Posted On</label>
+            <label for="postedOn" class="text-light">Posted On</label>
             <input type="date" name="postedOn" id="postedOn" class="form-control" required [(ngModel)]="newQuote.postedOn" #postedOn='ngModel'>
             <div [hidden]="postedOn.valid || postedOn.pristine" class="alert alert-danger">
                 <p>This filed must be filled</p>
@@ -45,6 +46,7 @@
                      <!-- displaying data to user -->
                      <!-- display {{newQuote.postedOn}} -->
         </div>
-        <button class="btn btn-success btn-lg mt-3">Add Quote</button>
+        <button class="btn btn-success btn-lg mt-3 mb-4">Add Quote</button>
     </form>
+</div>
 </div>

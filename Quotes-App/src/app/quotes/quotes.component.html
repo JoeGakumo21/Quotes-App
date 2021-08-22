@@ -1,99 +1,42 @@
-<!-- <div class="container">
-  <h1 class="header">Welcome to Inspirational Quotes at JoeKumsy</h1>
-  <hr>
-  <h3 class="text-">Quote App </h3>
-  <p class="text-dark">welcome in this website where you can create your own <em>Quote </em> and post it and see how
-    many people will like your quote</p>
-  <p>Enjoy </p>
-  <div class="jumbotron bg-light col-8 info">
-    <div class="row">
-      <div>
-        <ul>
-          <!-- to display name of user to write the quote -->
-          <!-- <li *ngFor="let quote of  myQuote; let i =index" class="text-primary">
-            <div class="row mt-3 col-lg-12 col-sm-12">
-              <div class="col-6">
-                {{quote.name}}
-              </div>
-              <div class="col-6 mb-3">
-                <button class="btn bg-warning mt-2 ml-5" (click)='toggleQuoteDetails(i)'>See Quote</button>
-              </div>
-              <hr>
-            </div>
-            <div class="row mt-2">
-              <div class="col-4">
-                <button (click)="onClickLikes()" class="btn btn-medium btn-success mt-3 mb-3">Likes
-                  {{numberOfLikes}}</button>
-              </div>
-              <div class="col-4">
-                <button (click)="onClickDislike()" class="btn btn-medium btn-info mt-3 mb-3">Dislike
-                  {{numberOfDislikes}}</button>
-              </div>
-              <div class="col-4 mt-2 text-danger mt-3 mb-3">
-                On: {{quote.postedOn|date}}
-              </div>
-            </div>
-            <app-quotes-details *ngIf='quote.showQuoteMessageAndAuthor' [myQuote]="quote"
-              (isQuoteDone)='quoteDoneDelete($event, i)'></app-quotes-details>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-4">
-    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-  </div> --> 
-
-  <!-- <div class="row ">
-    <div class="col-6 col-lg-6 col-sm-12">
-        <p>Posted By: <span>{{myQuote.author}}</span></p>
-    </div>
-    <div class="col-6 col-lg-6 col-sm-12">
-        <p>Posted On: {{myQuote.postedOn}}</p>
-    </div> -->
-  <div class="container">
+  <div class="container-fluid main-content">
     <h1 class="header">Welcome to Inspirational Quotes at JoeKumsy</h1>
-    <hr>
-    <h3 class="text-">Quote App </h3>
-    <p class="text-dark">welcome in this website where you can create your own <em>Quote </em> and post it and see how
+    <hr class="">
+    <!-- <p class="text-dark">welcome in this website where you can create your own <em>Quote </em> and post it and see how
       many people will like your quote</p>
-    <p>Enjoy </p>
-    <div class="row">
-      <div class="col-4">
+    <p>Enjoy </p> -->
+    <div class="row mb-5">
+      <div class="col-4 col-lg-4 col-sm-12 col-xs-12">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
-      <div class="col-7">
-        <div class="jumbotron bg-light info" *ngFor="let quote of  myQuote; let i =index">
+      <div class="col-8 col-sm-12 col-lg-8 content">
+        <div class="jumbotron" *ngFor="let quote of  myQuote; let i =index">
           <ul>
             <!-- to display name of user to write the quote -->
-            <li  class="text-primary">
-              <div class="row mt-3 col-lg-12 col-sm-12">
+            <h3  class="text-primary">
+              <div class="row mt-3 col-lg-12 col-sm-12 col-xs-12">
                 <div class="col-6">
                   {{quote.name}}
                 </div>
                 <div class="col-6 mb-3">
-                  <button class="btn bg-warning mt-2 ml-5" (click)='toggleQuoteDetails(i)'>See Quote</button>
+                  <button class="btn bg-info mt-2 ml-5" (click)='toggleQuoteDetails(i)'>See Quote</button>
                 </div>
                 <hr>
               </div>
               <div class="row mt-2">
-                <div class="col-4">
-                  <button (click)="onClickLikes()" class="btn btn-medium btn-success mt-3 mb-3">Likes
-                    {{numberOfLikes}}</button>
-                </div>
-                <div class="col-4">
-                  <button (click)="onClickDislike()" class="btn btn-medium btn-info mt-3 mb-3">Dislike
-                    {{numberOfDislikes}}</button>
-                </div>
-                <div class="col-4 mt-2 text-danger mt-3 mb-3">
-                  On: {{quote.postedOn|date}}
+                  <div class="col-4 mt-2 text-danger mt-3 mb-3">
+                  Posted On: {{quote.postedOn|date}}
                 </div>
               </div>
               <app-quotes-details *ngIf='quote.showQuoteMessageAndAuthor' [myQuote]="quote"
                 (isQuoteDone)='quoteDoneDelete($event, i)'></app-quotes-details>
-            </li>
+            </h3>
           </ul>
         </div>
       </div>
     </div>
+  </div>
+  <div class="container-fluid">
+    <footer>
+     <h4 class="text-center text-light footer">Inspiration Quote &copy; JoeGakumo</h4>
+    </footer>
   </div>
